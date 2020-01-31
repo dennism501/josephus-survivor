@@ -4,27 +4,27 @@ class JosephusSurvivor {
 
     public static void main(String[] args) {
         
-        int k,n;
+        int n,a;
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("****The Josephus Survivor****");
         System.out.println("Enter Sequence, K being the starting number and N being the ending number\n");
-        System.out.println("Enter K: \n");
-        k = scanner.nextInt();
-        System.out.println("Enter N: \n");
-        n=scanner.nextInt();
+        System.out.println("Enter n: \n");
+        n = scanner.nextInt();
+        System.out.println("Enter a: \n");
+        a=scanner.nextInt();
 
-        System.out.println("The Survivor is: "+josephus(n,k));
+        System.out.println("The Survivor is: "+josephus(a,n));
     }
 
 
-static int josephus(int n, int k) 
+static int josephus(int a, int n) 
 { 
-if (n <= 1 || k <= 1) 
+if (a <= 1 || n <= 1) 
     return 1;    
 else
   
-    return (josephus(n - 1, k) + k-1) % n + 1; 
+    return (josephus(a - 1, n) + n-1) % a + 1; 
 }
 
 }
